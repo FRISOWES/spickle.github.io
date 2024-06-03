@@ -35,8 +35,14 @@
             align-items: center;
             padding: 20px;
         }
-        .main-content img {
-            max-width: 80%;
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .images img {
+            max-width: 40%;
             height: auto;
             margin-bottom: 20px;
         }
@@ -98,7 +104,10 @@
     </header>
 
     <div class="main-content">
-        <img src="logo mainpage.png" alt="Main Page Image">
+        <div class="images">
+            <img src="logo mainpage.png" alt="Main Page Image">
+            <img src="spickle app.png" alt="App Screenshot">
+        </div>
         <h1>Spickle</h1>
         <p>Unlock the flavors of inspiration. Spickle is set to revolutionize the way you cook and explore recipes by curating an extensive digital cookbook library enriched with 100+ data points.</p>
         <p>High variety in food preferences and scattered recipe sources make it difficult for consumers to efficiently discover recipes that suit their needs, leading to a time-consuming and overwhelming search process.</p>
