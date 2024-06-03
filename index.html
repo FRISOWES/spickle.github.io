@@ -12,34 +12,63 @@
             color: #323639;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        }
+        header, section, footer {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
             text-align: center;
         }
         h1 {
             font-family: 'Raleway', sans-serif;
             color: #4285f4;
         }
-        .content {
-            padding: 20px;
+        h2 {
+            font-family: 'Raleway', sans-serif;
+            color: #323639;
         }
         .contact {
-            position: absolute;
-            bottom: 20px;
+            background-color: #323639;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact a {
+            color: #ffffff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="content">
+    <header>
         <img src="logo.png" alt="Spickle Logo" style="width:150px;">
         <h1>Spickle</h1>
         <p>#1 app coming up, Chef!</p>
-    </div>
-    <div class="contact">
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Unlock the flavors of inspiration. Spickle is set to revolutionize the way you cook and explore recipes by curating an extensive digital cookbook library enriched with 100+ data points.</p>
+    </section>
+
+    <section id="problems">
+        <h2>Problems</h2>
+        <p>People are complex and there are major shifts in food trends & consumer preferences. Consumers increasingly prioritize health and home cooking, seeking a wide range of recipes that cater to their unique food preferences and dietary restrictions.</p>
+        <p>High variety in food preferences and scattered recipe sources make it difficult for consumers to efficiently discover recipes that suit their needs, leading to a time-consuming and overwhelming search process.</p>
+    </section>
+
+    <section id="solution">
+        <h2>Solution</h2>
+        <p>Spickle curates an extensive digital cookbook library with a diverse collection of best-selling chefs across the globe and trusted cookbooks, enriched with 100+ data points. Our smart cookbook library, The Flavor DNA, learns from each interaction to provide personalized recipe recommendations for you and your dining partners.</p>
+    </section>
+
+    <section id="opportunity">
+        <h2>Market Opportunity</h2>
+        <p>The global market for online food delivery is expanding rapidly, with projections showing significant growth in grocery delivery and meal kit delivery. Spickle is positioned to capture a share of this growing market by providing integrated solutions that streamline the cooking and dining experience.</p>
+    </section>
+
+    <footer class="contact">
         <p>Contact Us: <a href="mailto:info@spickle.nl">info@spickle.nl</a></p>
-    </div>
+    </footer>
 </body>
 </html>
