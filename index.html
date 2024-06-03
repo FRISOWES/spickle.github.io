@@ -12,28 +12,81 @@
             color: #323639;
             margin: 0;
             padding: 0;
-        }
-        header, section, footer {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
             text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        header img {
+            width: 150px;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .main-content img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 20px;
         }
         h1 {
             font-family: 'Raleway', sans-serif;
             color: #4285f4;
+            font-size: 3em;
+            margin: 20px 0;
         }
-        h2 {
-            font-family: 'Raleway', sans-serif;
+        p {
+            font-family: 'Lato', sans-serif;
             color: #323639;
+            font-size: 1.2em;
+            max-width: 600px;
         }
-        .contact {
-            background-color: #323639;
-            color: #ffffff;
+        .cta {
+            background-color: #4285f4;
+            color: white;
             padding: 20px;
             text-align: center;
         }
-        .contact a {
+        .cta h2 {
+            font-family: 'Raleway', sans-serif;
+            margin: 0 0 10px 0;
+        }
+        .cta input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        .cta button {
+            background-color: white;
+            color: #4285f4;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #323639;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
             color: #ffffff;
             text-decoration: none;
         }
@@ -41,34 +94,38 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Spickle Logo" style="width:150px;">
-        <h1>Spickle</h1>
-        <p>#1 app coming up, Chef!</p>
+        <img src="logo.png" alt="Spickle Logo">
     </header>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
+    <div class="main-content">
+        <img src="logo mainpage.png" alt="Main Page Image">
+        <h1>Spickle</h1>
         <p>Unlock the flavors of inspiration. Spickle is set to revolutionize the way you cook and explore recipes by curating an extensive digital cookbook library enriched with 100+ data points.</p>
-    </section>
-
-    <section id="problems">
-        <h2>Problems</h2>
-        <p>People are complex and there are major shifts in food trends & consumer preferences. Consumers increasingly prioritize health and home cooking, seeking a wide range of recipes that cater to their unique food preferences and dietary restrictions.</p>
         <p>High variety in food preferences and scattered recipe sources make it difficult for consumers to efficiently discover recipes that suit their needs, leading to a time-consuming and overwhelming search process.</p>
-    </section>
-
-    <section id="solution">
-        <h2>Solution</h2>
         <p>Spickle curates an extensive digital cookbook library with a diverse collection of best-selling chefs across the globe and trusted cookbooks, enriched with 100+ data points. Our smart cookbook library, The Flavor DNA, learns from each interaction to provide personalized recipe recommendations for you and your dining partners.</p>
-    </section>
-
-    <section id="opportunity">
-        <h2>Market Opportunity</h2>
         <p>The global market for online food delivery is expanding rapidly, with projections showing significant growth in grocery delivery and meal kit delivery. Spickle is positioned to capture a share of this growing market by providing integrated solutions that streamline the cooking and dining experience.</p>
-    </section>
+    </div>
+
+    <div class="cta">
+        <h2>Be the first to know about updates!</h2>
+        <input type="email" id="email" placeholder="Enter your email address">
+        <button type="button" onclick="subscribe()">Subscribe</button>
+    </div>
 
     <footer class="contact">
         <p>Contact Us: <a href="mailto:info@spickle.nl">info@spickle.nl</a></p>
     </footer>
+
+    <script>
+        function subscribe() {
+            var email = document.getElementById('email').value;
+            if (email) {
+                alert('Thank you for subscribing, ' + email + '!');
+                // Here you can add functionality to send the email to your server or a service
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
 </body>
 </html>
