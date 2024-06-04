@@ -8,10 +8,17 @@
         body { margin: 0; padding: 0; }
         html { height: 100%; cursor: default; }
         body {
-            font-family: 'Lato', sans-serif; /* Default font */
-            width: 100%; height: 100%;
+            font-family: 'Lato', sans-serif;
+            background-color: #eeeeeeff;
+            color: #323639;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
-            display: table;
             opacity: 1;
             animation: fadein 3s forwards;
         }
@@ -19,12 +26,19 @@
             font-weight: 300;
             margin-bottom: 25px;
         }
-        img {
-            width: 100%; /* Image width */
+        img1 {
+            width: 65%; /* Image width */
             border: 0; /* For IE */
             /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
             /* When changing logo, change this also */
             aspect-ratio: 112.39 / 62.5;
+        }
+         img2 {
+            width: 65%; /* Image width */
+            border: 0; /* For IE */
+            /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
+            /* When changing logo, change this also */
+            aspect-ratio:100/100;
         }
         #main {
             vertical-align: middle;
@@ -83,7 +97,6 @@
 <body>
     <div id="main">
         <img src="logo mainpage.png" alt="Logo Image">
-        <img src="spickle app.png" alt="app image">
         <h1>Spickle</h1>
         <h2>#1 app coming up, Chef!. </h2>
         <div id="progress"><div id="fill"><div id="barpercent"><h3>25%</h3></div></div></div>
