@@ -4,93 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spickle - Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #eeeeeeff;
-            color: #323639;
+        body, html {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            text-align: center;
+            font-family: 'Lato', sans-serif;
+            color: #ffffff;
+            height: 100%;
+            overflow: hidden;
         }
         header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            z-index: 2;
         }
         header img {
             width: 150px;
         }
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .images img {
-            max-width: 40%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-family: 'Raleway', sans-serif;
-            color: #4285f4;
-            font-size: 3em;
-            margin: 20px 0;
-        }
-        p {
-            font-family: 'Lato', sans-serif;
-            color: #323639;
+        header .menu {
             font-size: 1.2em;
-            max-width: 600px;
+            cursor: pointer;
         }
-        .cta {
-            background-color: #4285f4;
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+        }
+        .overlay h1 {
+            font-size: 3em;
             color: white;
-            padding: 20px;
+            margin: 0;
+        }
+        .subscribe-section {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 500px;
+            z-index: 2;
             text-align: center;
         }
-        .cta h2 {
-            font-family: 'Raleway', sans-serif;
-            margin: 0 0 10px 0;
-        }
-        .cta input[type="email"] {
+        .subscribe-section input[type="email"] {
             padding: 10px;
             font-size: 1em;
-            margin: 10px 0;
-            width: 80%;
+            width: 70%;
             max-width: 300px;
             border: none;
             border-radius: 5px;
+            margin-right: 10px;
         }
-        .cta button {
-            background-color: white;
-            color: #4285f4;
-            padding: 10px 20px;
+        .subscribe-section button {
+            padding: 10px;
             font-size: 1em;
+            background-color: #4285f4;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         footer {
-            background-color: #323639;
-            color: white;
-            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
             text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            z-index: 2;
         }
         footer a {
             color: #ffffff;
@@ -101,30 +106,30 @@
 <body>
     <header>
         <img src="logo.png" alt="Spickle Logo">
+        <div class="menu" onclick="location.href='about.html'">About Us</div>
     </header>
 
-    <div class="main-content">
-        <div class="images">
-            <img src="logo mainpage.png" alt="Main Page Image">
-            <img src="spickle app.png" alt="App Screenshot">
-        </div>
-        <h1>Spickle</h1>
-        <p>Unlock the flavors of inspiration. Spickle is set to revolutionize the way you cook and explore recipes by curating an extensive digital cookbook library enriched with 100+ data points.</p>
-        <p>High variety in food preferences and scattered recipe sources make it difficult for consumers to efficiently discover recipes that suit their needs, leading to a time-consuming and overwhelming search process.</p>
-        <p>Spickle curates an extensive digital cookbook library with a diverse collection of best-selling chefs across the globe and trusted cookbooks, enriched with 100+ data points. Our smart cookbook library, The Flavor DNA, learns from each interaction to provide personalized recipe recommendations for you and your dining partners.</p>
-        <p>The global market for online food delivery is expanding rapidly, with projections showing significant growth in grocery delivery and meal kit delivery. Spickle is positioned to capture a share of this growing market by providing integrated solutions that streamline the cooking and dining experience.</p>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="Cooking.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
-    <div class="cta">
+    <div class="overlay">
+        <h1>#1 cooking app on the way, Chef!</h1>
+    </div>
+
+    <div class="subscribe-section">
         <h2>Be the first to know about updates!</h2>
-        <form action="YOUR_FORMSPREE_ENDPOINT_URL" method="POST">
+        <form action="https://formspree.io/f/mqkrrpaahttps://formspree.io/f/mqkrrpaa" method="POST">
             <input type="email" name="email" placeholder="Enter your email address" required>
             <button type="submit">Subscribe</button>
         </form>
     </div>
 
-    <footer class="contact">
-        <p>Contact Us: <a href="mailto:info@spickle.nl">info@spickle.nl</a></p>
+    <footer>
+        <p>© 2024 Spickle - All Rights Reserved.</p>
     </footer>
 </body>
 </html>
