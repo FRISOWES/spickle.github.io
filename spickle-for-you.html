@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spickle for You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        header img {
+            width: 150px;
+        }
+        header .menu {
+            display: flex;
+            gap: 20px;
+        }
+        header .menu div {
+            font-size: 1.2em;
+            cursor: pointer;
+            font-weight: bold;
+            color: #4285f4;
+        }
+        .image-section {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #323639;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Spickle Logo">
+        <div class="menu">
+            <div onclick="location.href='index.html'">Home</div>
+        </div>
+    </header>
+
+    <div class="image-section">
+        <img src="solution1.png" alt="Solution 1">
+        <img src="solution2.png" alt="Solution 2">
+        <img src="solution3.png" alt="Solution 3">
+        <img src="solution4.png" alt="Solution 4">
+    </div>
+
+    <footer>
+        <p>© 2024 Spickle - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
