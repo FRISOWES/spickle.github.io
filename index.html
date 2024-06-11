@@ -68,6 +68,15 @@
             font-size: 2.5em;
             color: white;
             margin: 0;
+            animation: flicker 0.5s infinite; /* Flicker effect */
+        }
+        @keyframes flicker {
+            0%, 50% {
+                color: white;
+            }
+            25%, 75% {
+                color: black;
+            }
         }
         .black-section {
             background-color: rgba(20,23,25,255);
@@ -117,15 +126,14 @@
         }
         @media (max-width: 768px) {
             .overlay h1 {
-                font-size: 2em;
+                font-size: 1.5em;
             }
-            .black-section {
-                padding: 60px 0;
+            .black-section h2 {
+                font-size: 1.2em;
             }
             .subscribe-section input[type="email"] {
                 width: 100%;
-                margin-right: 0;
-                margin-bottom: 10px;
+                margin: 10px 0;
             }
             .subscribe-section button {
                 width: 100%;
