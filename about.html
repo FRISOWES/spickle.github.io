@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Spickle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Circular+Std&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,10 +12,10 @@
             margin: 0;
             padding: 0;
             color: #323639;
-            overflow-x: hidden;
+            background-color: #f8f9fa;
         }
         header {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -23,7 +23,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            z-index: 2;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
         header img {
             width: 150px;
@@ -35,40 +37,66 @@
         header .menu div {
             font-size: 1.2em;
             cursor: pointer;
+            font-weight: bold;
+            color: #4285f4;
         }
         .main-content {
-            padding: 100px 20px;
+            padding: 120px 20px 50px 20px;
             text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
         .main-content h1 {
             font-family: 'Circular Std', sans-serif;
             font-size: 2.5em;
             color: #4285f4;
+            margin-bottom: 10px;
+        }
+        .main-content p {
+            font-size: 1.2em;
+            color: #555;
         }
         .section {
             padding: 50px 20px;
+            margin: 20px 0;
         }
         .section:nth-child(even) {
-            background-color: #eeeeeeff;
+            background-color: #ffffff;
         }
         .section:nth-child(odd) {
-            background-color: white;
+            background-color: #f1f1f1;
         }
         .section h2 {
             font-family: 'Circular Std', sans-serif;
+            font-size: 2em;
             color: #4285f4;
+            margin-bottom: 10px;
         }
         .section p {
             font-size: 1.2em;
             margin-bottom: 20px;
+            color: #555;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section li {
+            margin: 10px 0;
+            font-size: 1.1em;
         }
         footer {
-            background-color: rgba(20,23,25,255);
+            background-color: #323639;
             color: white;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
-            font-size: 0.8em;
-            width: 100%;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -83,28 +111,49 @@
     </header>
 
     <div class="main-content">
-        <h1>Spickle, an innovative food tech app for chefs, publishers & home-cooks</h1>
+        <h1>Learn More About Spickle</h1>
+        <p>Revolutionizing Culinary Experiences</p>
+        <p>Welcome to Spickle, where culinary traditions meet innovative technology. Our mission is to breathe new life into classic cookbooks by digitizing, translating, and indexing them for a global audience, preserving their original essence while making them accessible and engaging. Imagine what Spotify did for music; Spickle does for recipes and cookbooks.</p>
     </div>
 
     <div id="chefs" class="section">
-        <h2>For Chefs</h2>
-        <p>Spickle provides new ways for chefs to monetize, protect content, and reach a wider audience. With non-exclusive licensing, brand & influencer partnerships, and smart upload tools, chefs can focus on creating while Spickle handles the business.</p>
-        <p><strong>Challenges:</strong> Limited opportunities for monetization, lack of direct connection with the audience, difficulty in protecting intellectual property.</p>
-        <p><strong>Solutions:</strong> The Spickle Creator Fund, non-exclusive licensing, brand & influencer partnerships, cookbooks seasoned with digital spice, surf the marketing wave.</p>
+        <h2>For Home Cooks and Food Enthusiasts</h2>
+        <p>Tired of the endless search for recipes that fit your dietary needs and taste preferences? Spickle’s FlavorDNA technology curates personalized, high-quality recipes from celebrated chefs worldwide. Whether you're planning a family dinner or a gathering with friends, Spickle makes it easy to find recipes that cater to everyone’s needs.</p>
+        <ul>
+            <li><strong>Discover Your FlavorDNA:</strong> Our app learns from your interactions to build a unique profile of your dietary preferences, restrictions, and cooking habits, offering tailored recipe recommendations.</li>
+            <li><strong>FlavorBlend:</strong> Combine profiles with up to six people to find the perfect recipes for group dining, considering everyone's tastes and dietary needs.</li>
+            <li><strong>Interactive Features:</strong> Discover new recipes, organize dinner parties, and even order groceries directly from your local supermarket.</li>
+        </ul>
     </div>
 
     <div id="home-cooks" class="section">
-        <h2>For Home-cooks</h2>
-        <p>Discover a smart cookbook library, personalized recommendations, and a community platform to enhance your culinary journey. With the Flavor DNA, Discover Weekly, and The Blender, Spickle tailors recipes to your tastes and preferences.</p>
-        <p><strong>Challenges:</strong> Growing demand for healthy home-cooking, overwhelming and time-consuming search, high variety in food preferences.</p>
-        <p><strong>Solutions:</strong> Smart cookbook library, The Flavor DNA, Spickle Dinner Club, Discover Weekly, The Blender.</p>
+        <h2>For Chefs and Culinary Creators</h2>
+        <p>Spickle is a dynamic space for chefs to showcase their culinary art, engage with a global audience, and earn revenue. We honor the legacies and rights of chefs by providing them with tools to digitize their cookbooks and reach a wider audience.</p>
+        <ul>
+            <li><strong>Digitize Your Cookbook:</strong> Our secure upload tools process and enrich your recipes with data, preserving authenticity. No upfront payments—Spickle subsidizes digitization costs.</li>
+            <li><strong>Earn Revenue:</strong> Chefs earn through clicks and views on their content, supported by Spickle’s Creator Fund, which reserves a share of net income for royalty payouts.</li>
+            <li><strong>Build Your Brand:</strong> Collaborate with brands and sponsors, and gain access to analytics to make informed decisions about your content.</li>
+        </ul>
     </div>
 
     <div id="publishers" class="section">
-        <h2>For Publishers</h2>
-        <p>Spickle offers a high-quality cookbook recipe database enriched with 100+ data points, enabling innovative solutions for the culinary industry. From new exclusive JSON standards to B2B integrations and custom developments, Spickle supports publishers in reaching a global audience.</p>
-        <p><strong>Challenges:</strong> Limited opportunities for monetization, lack of direct connection with the audience, difficulty in protecting intellectual property.</p>
-        <p><strong>Solutions:</strong> New exclusive JSON standard, API services, B2B integrations, custom developments.</p>
+        <h2>For Investors and Publishers</h2>
+        <p>Spickle transforms the culinary landscape by creating a centralized, high-quality digital cookbook library enriched with over 100 data points. Our innovative platform fosters culinary collaboration and enhances user engagement.</p>
+        <ul>
+            <li><strong>A Unique Opportunity:</strong> Invest in a platform that leverages cutting-edge technology to deliver personalized culinary experiences, driving growth and engagement.</li>
+            <li><strong>Data-Driven Insights:</strong> Our extensive recipe database and FlavorDNA profiles provide valuable data for developing new features and enhancing user satisfaction.</li>
+            <li><strong>Global Reach:</strong> Spickle makes local cooking traditions accessible worldwide, spotlighting diverse culinary heritages and enabling global culinary collaboration.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Join the Spickle Community</h2>
+        <p>At Spickle, we believe in the power of food to bring people together. Our platform not only provides culinary inspiration but also connects chefs, home cooks, and food enthusiasts in a vibrant, interactive community.</p>
+        <ul>
+            <li><strong>Spickle Dinner Club:</strong> Transform group dining with streamlined meal planning, task coordination, and playful games to enhance social gatherings.</li>
+            <li><strong>Seamless Integration:</strong> Our API services and custom developments enable integration with smart kitchen equipment and collaboration with food industry partners.</li>
+            <li>Experience the future of cooking with Spickle. Discover new flavors, share your culinary creations, and join a global community that celebrates the joy of cooking.</li>
+        </ul>
     </div>
 
     <footer>
