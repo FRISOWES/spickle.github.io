@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spickle - Coming Soon</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Circular+Std&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -27,6 +28,7 @@
         }
         header img {
             width: 150px;
+            filter: brightness(0) invert(1); /* White overlay */
         }
         header .menu {
             font-size: 1.2em;
@@ -47,22 +49,32 @@
         }
         .overlay {
             position: absolute;
-            top: 50%;
+            top: 25%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             z-index: 2;
         }
         .overlay h1 {
+            font-family: 'Circular Std', sans-serif;
             font-size: 3em;
             color: white;
             margin: 0;
         }
+        .black-section {
+            position: relative;
+            background-color: #000000;
+            padding: 20px 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .black-section .cta h2 {
+            font-family: 'Circular Std', sans-serif;
+            margin: 0 0 10px 0;
+        }
         .subscribe-section {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
             width: 100%;
             max-width: 500px;
             z-index: 2;
@@ -87,14 +99,11 @@
             cursor: pointer;
         }
         footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
+            position: relative;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
+            padding: 10px;
+            text-align: center;
             z-index: 2;
         }
         footer a {
@@ -120,16 +129,18 @@
         <h1>#1 cooking app on the way, Chef!</h1>
     </div>
 
-    <div class="subscribe-section">
-        <h2>Be the first to know about updates!</h2>
-        <form action="https://formspree.io/f/mqkrrpaahttps://formspree.io/f/mqkrrpaa" method="POST">
-            <input type="email" name="email" placeholder="Enter your email address" required>
-            <button type="submit">Subscribe</button>
-        </form>
+    <div class="black-section">
+        <div class="cta">
+            <h2>Be the first to know about updates!</h2>
+            <form action="https://formspree.io/f/mqkrrpaa" method="POST" class="subscribe-section">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
 
     <footer>
         <p>© 2024 Spickle - All Rights Reserved.</p>
     </footer>
 </body>
-</html>
+</html>https://formspree.io/f/mqkrrpaa
