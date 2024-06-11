@@ -9,29 +9,57 @@
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-color: #eeeeeeff;
-            color: #323639;
             margin: 0;
+            padding: 0;
+            color: #323639;
+            overflow-x: hidden;
+        }
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
+            z-index: 2;
+        }
+        header img {
+            width: 150px;
+        }
+        header .menu {
+            display: flex;
+            gap: 20px;
+        }
+        header .menu div {
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .main-content {
+            padding: 100px 20px;
             text-align: center;
         }
-        h1 {
+        .main-content h1 {
+            font-family: 'Circular Std', sans-serif;
             font-size: 2.5em;
             color: #4285f4;
-            margin-bottom: 20px;
         }
-        p {
+        .section {
+            padding: 50px 20px;
+        }
+        .section:nth-child(even) {
+            background-color: #eeeeeeff;
+        }
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+        .section h2 {
+            font-family: 'Circular Std', sans-serif;
+            color: #4285f4;
+        }
+        .section p {
             font-size: 1.2em;
-            color: #323639;
-            max-width: 800px;
-            margin: auto;
-        }
-        .high-fidelity-screens {
-            margin-top: 40px;
-        }
-        .high-fidelity-screens img {
-            max-width: 100%;
-            height: auto;
             margin-bottom: 20px;
         }
         footer {
@@ -40,26 +68,53 @@
             padding: 10px;
             text-align: center;
             font-size: 0.8em;
-            width: 100%; /* Ensure it spans the full width */
-        }
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1>About Spickle</h1>
-    <p>Spickle is set to revolutionize the way you cook and explore recipes by curating an extensive digital cookbook library enriched with 100+ data points.</p>
-    <p>Our app provides personalized recipe recommendations tailored to your unique tastes and dietary preferences.</p>
+    <header>
+        <img src="logo.png" alt="Spickle Logo">
+        <div class="menu">
+            <div onclick="scrollToSection('chefs')">For Chefs</div>
+            <div onclick="scrollToSection('home-cooks')">For Home-cooks</div>
+            <div onclick="scrollToSection('publishers')">For Publishers</div>
+        </div>
+    </header>
 
-    <div class="high-fidelity-screens">
-        <h2>High Fidelity Screens</h2>
-        <img src="spickle app.png" alt="High Fidelity Screen">
+    <div class="main-content">
+        <h1>Spickle, an innovative food tech app for chefs, publishers & home-cooks</h1>
+    </div>
+
+    <div id="chefs" class="section">
+        <h2>For Chefs</h2>
+        <p>Spickle provides new ways for chefs to monetize, protect content, and reach a wider audience. With non-exclusive licensing, brand & influencer partnerships, and smart upload tools, chefs can focus on creating while Spickle handles the business.</p>
+        <p><strong>Challenges:</strong> Limited opportunities for monetization, lack of direct connection with the audience, difficulty in protecting intellectual property.</p>
+        <p><strong>Solutions:</strong> The Spickle Creator Fund, non-exclusive licensing, brand & influencer partnerships, cookbooks seasoned with digital spice, surf the marketing wave.</p>
+    </div>
+
+    <div id="home-cooks" class="section">
+        <h2>For Home-cooks</h2>
+        <p>Discover a smart cookbook library, personalized recommendations, and a community platform to enhance your culinary journey. With the Flavor DNA, Discover Weekly, and The Blender, Spickle tailors recipes to your tastes and preferences.</p>
+        <p><strong>Challenges:</strong> Growing demand for healthy home-cooking, overwhelming and time-consuming search, high variety in food preferences.</p>
+        <p><strong>Solutions:</strong> Smart cookbook library, The Flavor DNA, Spickle Dinner Club, Discover Weekly, The Blender.</p>
+    </div>
+
+    <div id="publishers" class="section">
+        <h2>For Publishers</h2>
+        <p>Spickle offers a high-quality cookbook recipe database enriched with 100+ data points, enabling innovative solutions for the culinary industry. From new exclusive JSON standards to B2B integrations and custom developments, Spickle supports publishers in reaching a global audience.</p>
+        <p><strong>Challenges:</strong> Limited opportunities for monetization, lack of direct connection with the audience, difficulty in protecting intellectual property.</p>
+        <p><strong>Solutions:</strong> New exclusive JSON standard, API services, B2B integrations, custom developments.</p>
     </div>
 
     <footer>
         <p>© 2024 Spickle - All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
