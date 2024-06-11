@@ -13,7 +13,7 @@
             font-family: 'Lato', sans-serif;
             color: #ffffff;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         header {
             position: absolute;
@@ -35,11 +35,9 @@
             cursor: pointer;
         }
         .video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: relative;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             overflow: hidden;
         }
         .video-container video {
@@ -49,7 +47,7 @@
         }
         .overlay {
             position: absolute;
-            top: 20%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -62,26 +60,19 @@
             margin: 0;
         }
         .black-section {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             background-color: #000000;
             padding: 20px 0;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .black-section .cta h2 {
+            text-align: center;
+            color: white;
             font-family: 'Circular Std', sans-serif;
+        }
+        .black-section h2 {
             margin: 0 0 10px 0;
         }
         .subscribe-section {
             width: 100%;
             max-width: 500px;
-            z-index: 2;
-            text-align: center;
+            margin: auto;
         }
         .subscribe-section input[type="email"] {
             padding: 10px;
@@ -102,12 +93,11 @@
             cursor: pointer;
         }
         footer {
-            position: relative;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 10px;
             text-align: center;
-            z-index: 2;
+            font-size: 0.8em;
         }
         footer a {
             color: #ffffff;
@@ -126,20 +116,17 @@
             <source src="Cooking.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    </div>
-
-    <div class="overlay">
-        <h1>#1 cooking app on the way, Chef!</h1>
+        <div class="overlay">
+            <h1>#1 cooking app on the way, Chef!</h1>
+        </div>
     </div>
 
     <div class="black-section">
-        <div class="cta">
-            <h2>Be the first to know about updates!</h2>
-            <form action="https://formspree.io/f/mqkrrpaa" method="POST" class="subscribe-section">
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
+        <h2>Be the first to know about updates!</h2>
+        <form action="https://formspree.io/f/mqkrrpaa" method="POST" class="subscribe-section">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </div>
 
     <footer>
