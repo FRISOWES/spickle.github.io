@@ -42,6 +42,7 @@
             cursor: pointer;
             font-weight: bold;
             color: #ffffff;
+            text-transform: lowercase; /* Ensure text is lowercase */
         }
         .video-container {
             position: relative;
@@ -114,6 +115,22 @@
             color: #ffffff;
             text-decoration: none;
         }
+        @media (max-width: 768px) {
+            .overlay h1 {
+                font-size: 2em;
+            }
+            .black-section {
+                padding: 60px 0;
+            }
+            .subscribe-section input[type="email"] {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .subscribe-section button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,7 +143,7 @@
     </header>
 
     <div class="video-container">
-        <video autoplay loop muted>
+        <video autoplay loop muted playsinline>
             <source src="Cooking.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
